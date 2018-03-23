@@ -1,0 +1,23 @@
+name: 'Thunder'
+core: 8.x
+type: profile
+description: 'Thunder: A subprofile of Lightning'
+version: 8.x-dev
+distribution:
+  name: Thunder
+base profile:
+  name: lightning
+dependencies:
+  - 'acsf'
+#  - 'acsf_sso'
+  - 'color'
+  - 'config_split'
+  - 'config_filter'
+  - 'config_ignore'
+  - 'config_split_manager'
+  - 'features'
+  - 'features_ui'
+themes:
+  - bartik
+  - seven
+project: thunder

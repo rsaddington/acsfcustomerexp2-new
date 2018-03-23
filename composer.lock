@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "db5fc83fbe14f10fa9fd62e57250ad61",
+    "content-hash": "9b5a2a51b2165a82f825a77e17827c4a",
     "packages": [
+        {
+            "name": "acquia/acsf-tools",
+            "version": "8.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acquia/acsf-tools.git",
+                "reference": "fc80b5603de7efe90419e5dbdf21a24fc140f493"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acquia/acsf-tools/zipball/fc80b5603de7efe90419e5dbdf21a24fc140f493",
+                "reference": "fc80b5603de7efe90419e5dbdf21a24fc140f493",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/yaml": "^3.0"
+            },
+            "type": "drupal-drush",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Sherron (msherron)",
+                    "homepage": "https://www.drupal.org/u/msherron",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sylvain Delbosc (sdelbosc)",
+                    "homepage": "https://www.drupal.org/u/sdelbosc",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Drush powered command line tools for working with Acquia Cloud Site Factory.",
+            "homepage": "https://github.com/acquia/acsf-tools",
+            "time": "2018-02-15T00:21:25+00:00"
+        },
         {
             "name": "acquia/blt",
             "version": "8.9.14",
@@ -694,16 +732,16 @@
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "3.1.13",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "3188461e965b32148c8fb85261833b2b72d34b8c"
+                "reference": "da889e4bce19f145ca4ec5b1725a946f4eb625a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/3188461e965b32148c8fb85261833b2b72d34b8c",
-                "reference": "3188461e965b32148c8fb85261833b2b72d34b8c",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/da889e4bce19f145ca4ec5b1725a946f4eb625a9",
+                "reference": "da889e4bce19f145ca4ec5b1725a946f4eb625a9",
                 "shasum": ""
             },
             "require": {
@@ -712,10 +750,16 @@
                 "symfony/finder": "^2.5|^3|^4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8",
-                "satooshi/php-coveralls": "^1.0.2 | dev-master",
+                "g-1-a/composer-test-scenarios": "^2",
+                "phpunit/phpunit": "^5.7.27",
+                "satooshi/php-coveralls": "^2",
                 "squizlabs/php_codesniffer": "^2.7",
+                "symfony/console": "3.2.3",
+                "symfony/var-dumper": "^2.8|^3|^4",
                 "victorjonsson/markdowndocs": "^1.3"
+            },
+            "suggest": {
+                "symfony/var-dumper": "For using the var_dump formatter"
             },
             "type": "library",
             "extra": {
@@ -739,7 +783,7 @@
                 }
             ],
             "description": "Format text by applying transformations provided by plug-in formatters.",
-            "time": "2017-11-29T15:25:38+00:00"
+            "time": "2018-03-20T15:18:32+00:00"
         },
         {
             "name": "consolidation/robo",
@@ -1707,6 +1751,276 @@
             }
         },
         {
+            "name": "drupal/acsf",
+            "version": "1.45.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/acsf",
+                "reference": "8.x-1.45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-1.45.zip",
+                "reference": "8.x-1.45",
+                "shasum": "3785b25a6b17b54e7e432f296df4cb6f58cdcf97"
+            },
+            "require": {
+                "drupal/acsf_duplication": "*",
+                "drupal/acsf_theme": "*",
+                "drupal/acsf_variables": "*",
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/acsf_variables": "*",
+                "drupal/samlauth": "^2.0.0-alpha1",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~5.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.45",
+                    "datestamp": "1521024480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\acsf\\": "src/"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia",
+                    "homepage": "https://www.drupal.org/user/14023",
+                    "email": "support@acquia.com"
+                },
+                {
+                    "name": "Rok Žlender",
+                    "homepage": "https://www.drupal.org/user/61873"
+                },
+                {
+                    "name": "acquia.sf.ci",
+                    "homepage": "https://www.drupal.org/user/3285763"
+                },
+                {
+                    "name": "attila.fekete",
+                    "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "nagba",
+                    "homepage": "https://www.drupal.org/user/21231"
+                },
+                {
+                    "name": "nikgregory",
+                    "homepage": "https://www.drupal.org/user/419643"
+                },
+                {
+                    "name": "paul.lovvik",
+                    "homepage": "https://www.drupal.org/user/289213"
+                }
+            ],
+            "description": "Connects a site with Acquia Cloud Site Factory.",
+            "homepage": "https://www.drupal.org/project/acsf",
+            "support": {
+                "source": "http://cgit.drupalcode.org/acsf"
+            }
+        },
+        {
+            "name": "drupal/acsf_duplication",
+            "version": "1.45.0",
+            "require": {
+                "drupal/acsf": "self.version",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.45",
+                    "datestamp": "1521024480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alan Evans",
+                    "homepage": "https://www.drupal.org/user/14023"
+                },
+                {
+                    "name": "Rok Žlender",
+                    "homepage": "https://www.drupal.org/user/61873"
+                },
+                {
+                    "name": "acquia.sf.ci",
+                    "homepage": "https://www.drupal.org/user/3285763"
+                },
+                {
+                    "name": "attila.fekete",
+                    "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "nagba",
+                    "homepage": "https://www.drupal.org/user/21231"
+                },
+                {
+                    "name": "nikgregory",
+                    "homepage": "https://www.drupal.org/user/419643"
+                },
+                {
+                    "name": "paul.lovvik",
+                    "homepage": "https://www.drupal.org/user/289213"
+                }
+            ],
+            "description": "Helper module for duplicating Acquia Cloud Site Factory sites.",
+            "homepage": "https://www.drupal.org/project/acsf",
+            "support": {
+                "source": "http://cgit.drupalcode.org/acsf"
+            }
+        },
+        {
+            "name": "drupal/acsf_theme",
+            "version": "1.45.0",
+            "require": {
+                "drupal/acsf": "self.version",
+                "drupal/acsf_variables": "*",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.45",
+                    "datestamp": "1521024480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alan Evans",
+                    "homepage": "https://www.drupal.org/user/14023"
+                },
+                {
+                    "name": "Rok Žlender",
+                    "homepage": "https://www.drupal.org/user/61873"
+                },
+                {
+                    "name": "acquia.sf.ci",
+                    "homepage": "https://www.drupal.org/user/3285763"
+                },
+                {
+                    "name": "attila.fekete",
+                    "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "nagba",
+                    "homepage": "https://www.drupal.org/user/21231"
+                },
+                {
+                    "name": "nikgregory",
+                    "homepage": "https://www.drupal.org/user/419643"
+                },
+                {
+                    "name": "paul.lovvik",
+                    "homepage": "https://www.drupal.org/user/289213"
+                }
+            ],
+            "description": "Handles VCS-based themes on Acquia Cloud Site Factory.",
+            "homepage": "https://www.drupal.org/project/acsf",
+            "support": {
+                "source": "http://cgit.drupalcode.org/acsf"
+            }
+        },
+        {
+            "name": "drupal/acsf_variables",
+            "version": "1.45.0",
+            "require": {
+                "drupal/acsf": "self.version",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.45",
+                    "datestamp": "1521024480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alan Evans",
+                    "homepage": "https://www.drupal.org/user/14023"
+                },
+                {
+                    "name": "Rok Žlender",
+                    "homepage": "https://www.drupal.org/user/61873"
+                },
+                {
+                    "name": "acquia.sf.ci",
+                    "homepage": "https://www.drupal.org/user/3285763"
+                },
+                {
+                    "name": "attila.fekete",
+                    "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "nagba",
+                    "homepage": "https://www.drupal.org/user/21231"
+                },
+                {
+                    "name": "nikgregory",
+                    "homepage": "https://www.drupal.org/user/419643"
+                },
+                {
+                    "name": "paul.lovvik",
+                    "homepage": "https://www.drupal.org/user/289213"
+                }
+            ],
+            "description": "Stores sensitive variables in a single place for easy scrubbing.",
+            "homepage": "https://www.drupal.org/project/acsf",
+            "support": {
+                "source": "http://cgit.drupalcode.org/acsf"
+            }
+        },
+        {
             "name": "drupal/coder",
             "version": "8.2.12",
             "source": {
@@ -1878,6 +2192,63 @@
             }
         },
         {
+            "name": "drupal/config_ignore",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_ignore",
+                "reference": "8.x-2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "07e00684930706632b3f2fc2a7433ffdae57cde7"
+            },
+            "require": {
+                "drupal/config_filter": "1.*",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.1",
+                    "datestamp": "1507706044",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Tommy Lynge Jørgensen",
+                    "homepage": "https://www.drupal.org/u/tlyngej",
+                    "email": "tlyngej@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Ignore certain configuration during import.",
+            "homepage": "http://drupal.org/project/config_ignore",
+            "support": {
+                "source": "http://cgit.drupalcode.org/config_ignore",
+                "issues": "http://drupal.org/project/config_ignore",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/config_split",
             "version": "1.3.0",
             "source": {
@@ -1948,6 +2319,63 @@
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
+        },
+        {
+            "name": "drupal/config_split_manager",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_split_manager",
+                "reference": "f28ebea1f1fb0fa88136809d9975a7df6fbd0c64"
+            },
+            "require": {
+                "drupal/config_filter": "*",
+                "drupal/config_split": "*",
+                "drupal/core": "~8.0",
+                "php": ">=5.6.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1520887684",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Atul Kamboj",
+                    "homepage": "https://www.drupal.org/u/atulkamboj",
+                    "email": "atulkamboj@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allows administrator to select modules per ennvironment and those will get exported to separate directories when exporting with 'drush csmex -y' command",
+            "homepage": "https://www.drupal.org/project/config_split_manager",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/config_split_manager"
+            },
+            "time": "2018-03-12T21:53:14+00:00"
         },
         {
             "name": "drupal/config_update",
@@ -5717,6 +6145,45 @@
                 "html"
             ],
             "time": "2018-02-23T01:58:20+00:00"
+        },
+        {
+            "name": "geerlingguy/drupal-vm",
+            "version": "4.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geerlingguy/drupal-vm.git",
+                "reference": "1868184ad30ad407b1a2b659e719de9ce5bfd298"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/1868184ad30ad407b1a2b659e719de9ce5bfd298",
+                "reference": "1868184ad30ad407b1a2b659e719de9ce5bfd298",
+                "shasum": ""
+            },
+            "type": "vm",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "http://www.jeffgeerling.com"
+                },
+                {
+                    "name": "Oskar Schöldström",
+                    "homepage": "http://oxy.fi"
+                }
+            ],
+            "description": "A VM for local Drupal development, built with Vagrant + Ansible",
+            "homepage": "https://www.drupalvm.com",
+            "keywords": [
+                "drupal",
+                "vagrant",
+                "virtual machine",
+                "vm"
+            ],
+            "time": "2018-03-10T17:47:45+00:00"
         },
         {
             "name": "grasmash/drupal-security-warning",
@@ -9510,16 +9977,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.2",
+            "version": "v1.35.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601"
+                "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9c24f2cd39dc1906b76879e099970b7e53724601",
-                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
+                "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
                 "shasum": ""
             },
             "require": {
@@ -9527,8 +9994,8 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.3@dev"
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.3"
             },
             "type": "library",
             "extra": {
@@ -9571,7 +10038,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-03T16:21:29+00:00"
+            "time": "2018-03-20T04:25:58+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -11294,7 +11761,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/config_split_manager": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

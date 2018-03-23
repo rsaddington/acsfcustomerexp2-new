@@ -1,0 +1,21 @@
+uuid: 30b629dd-a928-4e3e-9dfe-0c3979d64150
+langcode: en
+status: true
+dependencies: {  }
+id: green
+label: Green
+folder: ../config/sites/green
+module: {  }
+theme: {  }
+blacklist:
+  - color.theme.bartik
+  - config_split.config_split.blog
+  - config_split.config_split.blue
+  - config_split.config_split.green
+  - config_split.config_split.press_room
+  - config_split.config_split.red
+  - config_split.config_split.yellow
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
