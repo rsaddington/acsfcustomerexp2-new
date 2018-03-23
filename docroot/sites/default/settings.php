@@ -795,10 +795,11 @@ require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 $settings['install_profile'] = 'thunder';
 
 # as per https://blt.readthedocs.io/en/latest/readme/multisite/
-$multisite_settings = DRUPAL_ROOT . "/sites/" . $_SERVER["HTTP_HOST"] . "/settings.php";
-if (file_exists($multisite_settings)) {
-  require $multisite_settings;
-}
+//$multisite_settings = DRUPAL_ROOT . "/sites/" . $_SERVER["HTTP_HOST"] . "/settings.php";
+
+//if (file_exists($multisite_settings)) {
+//  require $multisite_settings;
+//}
 
 # Useful tip for dev from https://blt.readthedocs.io/en/latest/readme/config-split/#development-settings
 $settings['cache']['bins']['discovery'] = 'cache.backend.null';
