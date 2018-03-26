@@ -1,5 +1,5 @@
 project:
-  machine_name: blt-acsf-exp
+  machine_name: local.blt-acsf-exp.com
   prefix: BLT
   human_name: 'BLTed 8'
   profile:

@@ -359,31 +359,3 @@
 #    'uri' => 'http://example.com',
 #    'root' => $aliases['dev']['root'],
 #  ) + $aliases['server'];
-
-// Local environment.
-$aliases['blue.local'] = array(
-  'root' => '/var/www/blt-acsf-exp/docroot',
-  'uri' => 'http://blue.local.blt-acsf-exp.com/',
-  );
-$aliases['green.local'] = array(
-  'root' => '/var/www/blt-acsf-exp/docroot',
-  'uri' => 'http://green.local.blt-acsf-exp.com/',
-  );
-$aliases['red.local'] = array(
-  'root' => '/var/www/blt-acsf-exp/docroot',
-  'uri' => 'http://red.local.blt-acsf-exp.com/',
-  );
-$aliases['yellow.local'] = array(
-  'root' => '/var/www/blt-acsf-exp/docroot',
-  'uri' => 'http://yellow.local.blt-acsf-exp.com/',
-  );
-
-// Add remote connection options when alias is used outside VM.
-if ('vagrant' != $_SERVER['USER']) {
-  $aliases['blt-acsf-exp.local'] += array(
-    'remote-host' => 'local.blt-acsf-exp.com',
-    'remote-user' => 'vagrant',
-    'ssh-options' => '-o PasswordAuthentication=no -i ' . drush_server_home() . '/.vagrant.d/insecure_private_key'
-  );
-}
-
