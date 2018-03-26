@@ -8,10 +8,10 @@ project:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
 multisites:
-  - blue.local.blt-acsf-exp.com
-  - green.local.blt-acsf-exp.com
-  - red.local.blt-acsf-exp.com
-  - yellow.local.blt-acsf-exp.com   
+  - blue
+  - green
+  - red
+  - yellow  
 git:
   default_branch: master
   remotes:

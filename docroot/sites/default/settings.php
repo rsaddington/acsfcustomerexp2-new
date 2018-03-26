@@ -1,7 +1,7 @@
 <?php
 
 // ===== Added by acsf-init, please do not delete. Section start. =====
-include dirname(__FILE__) . '/acsf.settings.php';
+//include dirname(__FILE__) . '/acsf.settings.php';
 // ===== Added by acsf-init, please do not delete. Section end. =====
 
 
@@ -786,13 +786,13 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 $settings['install_profile'] = 'thunder';
+
+if (file_exists($app_root . '/' . $site_path . '/settings/local.settings.php')) {
+  include $app_root . '/' . $site_path . '/settings/local.settings.php';
+}
 
 # as per https://blt.readthedocs.io/en/latest/readme/multisite/
 //$multisite_settings = DRUPAL_ROOT . "/sites/" . $_SERVER["HTTP_HOST"] . "/settings.php";
