@@ -1,5 +1,5 @@
 project:
-  machine_name: local.blt-acsf-exp.com
+  machine_name: blt-acsf-exp
   prefix: BLT
   human_name: 'BLTed 8'
   profile:
@@ -19,9 +19,9 @@ git:
 drush:
   aliases:
     remote: '${project.machine_name}.test'
-    local: self
-    ci: self
-  default_alias: '${drush.aliases.local}'
+    local: blue.local
+    ci: blue.local
+  default_alias: 'blue.local'
 modules:
   local:
     enable: [dblog, devel, seckit, views_ui]
