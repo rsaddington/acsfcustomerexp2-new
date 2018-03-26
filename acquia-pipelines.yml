@@ -26,6 +26,7 @@ events:
             type: script
             script:
               - mysql -u root -proot -e "CREATE DATABASE drupal_blue"
+              - blt doctor
               - source ${BLT_DIR}/scripts/pipelines/setup_app
         - tests:
             type: script
