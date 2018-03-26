@@ -25,6 +25,7 @@ events:
         - setup-app:
             type: script
             script:
+              - mysql -u root -proot -e "CREATE DATABASE drupal_blue"
               - source ${BLT_DIR}/scripts/pipelines/setup_app
         - tests:
             type: script
