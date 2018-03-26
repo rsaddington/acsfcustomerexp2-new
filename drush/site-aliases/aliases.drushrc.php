@@ -361,10 +361,23 @@
 #  ) + $aliases['server'];
 
 // Local environment.
-$aliases['blt-acsf-exp.local'] = array(
+$aliases['blue.local'] = array(
   'root' => '/var/www/blt-acsf-exp/docroot',
-  'uri' => 'http://local.blt-acsf-exp.com',
+  'uri' => 'http://blue.local.blt-acsf-exp.com/',
   );
+$aliases['green.local'] = array(
+  'root' => '/var/www/blt-acsf-exp/docroot',
+  'uri' => 'http://green.local.blt-acsf-exp.com/',
+  );
+$aliases['red.local'] = array(
+  'root' => '/var/www/blt-acsf-exp/docroot',
+  'uri' => 'http://red.local.blt-acsf-exp.com/',
+  );
+$aliases['yellow.local'] = array(
+  'root' => '/var/www/blt-acsf-exp/docroot',
+  'uri' => 'http://yellow.local.blt-acsf-exp.com/',
+  );
+
 // Add remote connection options when alias is used outside VM.
 if ('vagrant' != $_SERVER['USER']) {
   $aliases['blt-acsf-exp.local'] += array(
