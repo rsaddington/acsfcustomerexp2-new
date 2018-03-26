@@ -359,11 +359,3 @@
 #    'uri' => 'http://example.com',
 #    'root' => $aliases['dev']['root'],
 #  ) + $aliases['server'];
-
-$aliases['blue.local'] = array(
-  'uri' => 'local.blt-acsf-exp.com',
-  'root' => '/var/www/blt-acsf-exp/docroot',
-  'path-aliases' => array(
-    '%dump-dir' => '/tmp',
-  ),
-);
